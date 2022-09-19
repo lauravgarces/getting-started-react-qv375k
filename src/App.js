@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { useStoryblok, StoryblokComponent } from "@storyblok/react";
+import { useStoryblok, StoryblokComponent } from '@storyblok/react';
 
 function App() {
-
   // The slug of the story
-  let slug = 'home'
+  let slug = 'home';
 
-  const story = useStoryblok(slug, 
-    { version: "draft" } // Or published
-    );
+  const story = useStoryblok(
+    slug,
+    { version: 'draft' } // Or published
+  );
 
   if (!story || !story.content) {
     return <div>Loading...</div>;
